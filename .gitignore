@@ -1,0 +1,10 @@
+# IDE
+.idea/
+
+# Build dependencies
+dependencies/
+node_modules/
+
+# Postinstall files
+.husky/
+

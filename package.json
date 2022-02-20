@@ -1,0 +1,27 @@
+{
+  "name": "@sign/i18n",
+  "version": "0.0.1",
+  "title": "i18n",
+  "color": "black",
+  "icon": {
+    "emoji": "🌐"
+  },
+  "description": "Shared i18n names for common types like countries and languages",
+  "repository": "https://github.com/sign/i18n.git",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "prettier": "./node_modules/@sign/configuration/.prettierrc.json",
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "husky install",
+    "postinstall:husky": "cp -r ./node_modules/@sign/configuration/.husky/ .husky/",
+    "postinstall": "npm run postinstall:husky"
+  },
+  "devDependencies": {
+    "@sign/configuration": "git://github.com/sign/.github.git",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1"
+  }
+}
