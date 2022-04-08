@@ -86,6 +86,14 @@ for (const type of fs.readdirSync(customDir)) {
 for (const [type, i18n] of Object.entries(build)) {
     fs.mkdirSync(`build/${type}`);
     for (const [code, map] of Object.entries(i18n)) {
-        fs.writeFileSync(`build/${type}/${code}.json`, JSON.stringify(map, null, 2) + '\n');
+        const codeNames = [code];
+        if (code.split('-').length === 2) {
+            const [lang, country] = code.split('-');
+            codeNames.push(`${lang}-${country.toUpperCase()}`);
+        }
+        console.log(codeNames)
+        for (const codeName of codeNames) {
+            fs.writeFileSync(`build/${type}/${codeName}.json`, JSON.stringify(map, null, 2) + '\n');
+        }
     }
 }
