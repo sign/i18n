@@ -14,7 +14,7 @@
   "prettier": "./node_modules/@sign/configuration/.prettierrc.json",
   "scripts": {
     "build": "node build.js",
-    "prepare:husky": "cp -r ./node_modules/@sign/configuration/.husky/ .husky/",
+    "prepare:husky": "node -e \"require('fs').cpSync('node_modules/@sign-mt/configuration/.husky/', '.husky/', {recursive: true})\"",
     "prepare": "husky install && npm run prepare:husky"
   },
   "devDependencies": {
