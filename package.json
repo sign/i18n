@@ -11,14 +11,14 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "prettier": "./node_modules/@sign/configuration/.prettierrc.json",
+  "prettier": "./node_modules/@sign-mt/configuration/.prettierrc.json",
   "scripts": {
     "build": "node build.js",
     "prepare:husky": "node -e \"require('fs').cpSync('node_modules/@sign-mt/configuration/.husky/', '.husky/', {recursive: true})\"",
     "prepare": "husky install && npm run prepare:husky"
   },
   "devDependencies": {
-    "@sign/configuration": "git://github.com/sign/.github.git",
+    "@sign-mt/configuration": "git://github.com/sign/.github.git",
     "csvtojson": "^2.0.10",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
