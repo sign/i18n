@@ -32,6 +32,7 @@ async function main() {
     countries: {},
     languages: {},
     signedLanguages: {},
+    signedLanguagesShort: {},
   };
 
   function add(type, code, obj) {
