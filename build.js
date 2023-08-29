@@ -44,6 +44,8 @@ async function main() {
     }
   }
 
+  console.log('Building i18n data...');
+
   // Both
   const dataDir = 'dependencies/i18n_data/cache/file_data_provider/';
   for (const fName of fs.readdirSync(dataDir)) {
@@ -89,6 +91,9 @@ async function main() {
   // Custom
   const customDir = 'custom/';
   for (const type of fs.readdirSync(customDir)) {
+    if (type === '.DS_Store') {
+      continue;
+    }
     for (const fName of fs.readdirSync(customDir + type)) {
       const [code, _] = fName.split('.');
       const map = JSON.parse(String(fs.readFileSync(customDir + type + '/' + fName)));
@@ -170,4 +175,7 @@ async function main() {
 
 main()
   .then(() => process.exit(0))
-  .catch(() => process.exit(1));
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
