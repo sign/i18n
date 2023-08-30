@@ -16,7 +16,7 @@ We also aim to support `signedLanguagesShort`, which is a shorter version of the
 For example, "American Sign Language" would be "American", or "International Sign" would be "International".
 
 We verified and created short names for:
-English, Hebrew.
+English, Hebrew, French, German.
 
 It would be great if you could help us verify the translations!
 
