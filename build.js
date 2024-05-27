@@ -12,6 +12,7 @@ const repositories = [
   ['cospired', 'i18n-iso-languages'],
   ['onomojo', 'i18n-country-translations'],
   ['ladjs', 'country-language'],
+  ['google-research', 'url-nlp'],
 ];
 
 for (const [owner, name] of repositories) {
@@ -158,6 +159,10 @@ async function main() {
     build.countries[missingCountry] = {};
   }
 
+  // From Google
+  // https://github.com/google-research/url-nlp.git
+
+  // Write to build
   for (const [type, i18n] of Object.entries(build)) {
     fs.mkdirSync(`build/${type}`);
     for (const [code, map] of Object.entries(i18n)) {
