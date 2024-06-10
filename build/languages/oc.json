@@ -48,7 +48,7 @@
   "fr": "francés",
   "fy": "frison del l'oèst",
   "ff": "Fulah",
-  "gd": "escocés",
+  "gd": "gaelic escossés",
   "ga": "irlandés",
   "gl": "galician",
   "gv": "manés",
@@ -137,7 +137,7 @@
   "ru": "Rus",
   "sg": "Sango",
   "sa": "Sanscrit",
-  "si": "cingalés",
+  "si": "singalés",
   "sk": "eslovac",
   "sl": "eslovèn",
   "se": "Sami septentrional",
@@ -183,6 +183,6 @@
   "za": "Zhuang; Chuang",
   "zh": "chinés",
   "zu": "zólo",
-  "zh-cn": "mandarin estandard",
+  "zh-cn": "mandarin",
   "sh": "sèrbocroat"
 }
